@@ -144,8 +144,8 @@ a {
     .nav {
         top: 0;
         left: 0;
-        margin: 80px;
-        width: calc(100% - 160px);
+        margin: 60px;
+        width: calc(100% - 120px);
     }
 
     .nav__menu {
@@ -165,7 +165,7 @@ a {
     }
 
     body {
-        margin: 80px;
+        margin: 25px;
         font-size: var(--normal-font-size);
     }
     
