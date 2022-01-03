@@ -72,7 +72,6 @@ html {
 }
 
 body {
-    margin: var(--m-20) var(--m-20) 0 var(--m-20);
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
@@ -98,13 +97,14 @@ a {
 }
 
 .nav {
-    position: relative;
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: var(--header-height);
     z-index: 500;
-
+    width: calc(100% - 40px);
+    margin: var(--m-20);
 }
 
 @media screen and (max-width: 620px){
@@ -125,15 +125,12 @@ a {
     }
 
     .main {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 var(--m-20) 0 var(--m-20);
+        padding-top: 90px;
+        min-height: 100vh;
     }
 
     .home__content {
         font-size: var(--small-font-size);
-        margin: 0 var(--m-20);
     }
 
     .home__title {
@@ -143,6 +140,14 @@ a {
 }
 
 @media screen and (min-width: 620px) and (max-width: 1200px) {
+    
+    .nav {
+        top: 0;
+        left: 0;
+        margin: 80px;
+        width: calc(100% - 160px);
+    }
+
     .nav__menu {
         position:absolute;
         margin-left: 40%;
@@ -154,13 +159,9 @@ a {
         border-radius: 10px;
         z-index: 500;
     }
-
+    
     .main {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
+        min-height: 80vh;
     }
 
     body {
@@ -177,6 +178,13 @@ a {
 
 @media screen and (min-width: 1200px){
 
+    .nav {
+        top: 0;
+        left: 0;
+        margin: 100px;
+        width: calc(100% - 200px);
+    }
+
     .nav__menu {
         position:absolute;
         margin-left: 75%;
@@ -190,7 +198,7 @@ a {
     }
 
     .main {
-        width: 100%;
+        min-height: 80vh;
     }
 
     body {
@@ -318,11 +326,13 @@ a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: absolute;
-    top: 0;
+    position: relative;
     bottom: 0;
-    left: 0;
-    /* margin: 0 var(--m-20) 0 var(--m-20); */
+    padding-top: 90px;
+    padding-left: var(--m-20);
+    padding-right: var(--m-20);
+    padding-bottom: 120px;
+    margin: 0px auto;
     z-index: 1;
 }
 
@@ -348,12 +358,12 @@ a {
     justify-content: center;
     font-size: var(--small-font-size);
     color: var(--high-color-3);
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 0.625rem;
     width: 100%;
-    z-index: 500;
+    z-index: 250;
 }
 
 .title__status {
